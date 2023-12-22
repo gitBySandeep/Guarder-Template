@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style>
+      * {
+         margin: 0;
+         font-family: sans-serif;
+      }
+      .content {
+         top: 8px;
+         height: 610px;
+         width: 100%;
+         background-color: black;
+         background-image: url("hero-bg.jpg");
+         background-size: 107%;         
+      }
+    
+      .color{
+         width: 100%;
+         height: 95%;
+         background-color: black;
+         position: absolute;
+         top: 5%;
+         opacity: 0.5;
+      }
+      
+      .header {
+         height: 45px;
+         border: 1px solid black;
+         background-color: black;
+         color: white;
+         display: flex;
+         font-size: 14px;
+         align-items: center;
+      }
+      .header div:nth-child(1){
+         height: 20px;
+         width: 320px;
+         margin-left: 25px;
+      /* border: 1px solid red; */
+      }
+      .header div:nth-child(2){
+         height: 20px;
+         width: 280px;
+         margin-left: 215px;
+      /* border: 1px solid red; */
+      }
+      .header i{
+         color: white;
+      }
+      .header div:nth-child(3){
+         height: 20px;
+         width: 160px;
+         margin-left: 240px;
+      /* border: 1px solid red; */
+      }
+  
+
+      .contener {
+         height: 250px;
+         width: 500px;
+         margin-top: 160px;
+         margin-left: 160px;
+      }
+
+      .contacts{
+         height: 60px;
+         width: 100%;
+         /* border: 1px solid red; */
+         color: white;
+         font-weight: bold;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+        font-size: 15px;
+      }  
+    .contacts1{
+      height: 20px;
+      width: 100px;
+      margin-left: 20px;
+    }
+    
+    .contacts2 {
+      height: 65px;
+      width: 500px;
+      box-sizing: border-box;
+      margin-left: 625px;
+      margin-top: -6px;     text-align: end;
+   }
+
+    .contacts2 a{
+        margin-left: 20px;
+        box-sizing: border-box;
+        border: none;
+        line-height: 6;
+        padding-top: 37px;
+        padding-bottom: 12px;
+    }
+    .contacts2 a:hover{
+      background-color: black;
+    }
+      .heading { 
+          box-sizing: border-box;
+         margin-top: 10px;
+         font-size: 15px;
+      }
+
+      .heading h1 {
+         font-size: 35px;
+      }
+
+      .heading h1:nth-child(1) {
+         color: white;
+      }
+
+      .heading h1:nth-child(2) {
+         color: #f1db25;
+      }
+
+      .pera {
+         height: 40px;
+         margin-top: 20px;
+         /* width: 340px; */
+         box-sizing: border-box;
+         /* border: 1px solid red; */
+         font-size: 15px;
+         color: white;
+      }
+
+      .buttons {
+         height: 40px;
+         width: 400px;
+         margin-top: 20px;
+      }
+
+      .buttons button:nth-child(1) {
+         height: 38px;
+         width: 145px;
+         border: 1px solid white;
+         margin-left: 10px;
+      }
+      .buttons button:nth-child(1):hover {
+           border: 1px solid white;
+           background-color: black;
+           opacity: 0.6;
+           color: white;
+      }
+     
+      .buttons button:nth-child(2) {
+         height: 38px;
+         width: 145px;
+         border: none;
+         margin-left: 6px;
+         background-color: #f1db25;
+      }
+      
+      .buttons button:nth-child(2):hover {
+           border: 1px solid #f1db25;
+           background-color: black;
+           opacity: 0.6;
+           color: #f1db25;
+      }
+
+      .two {
+         height: 500px;
+         /* border: 1px solid red; */
+         display: flex;
+         flex-direction: row;
+      }
+
+      .left1 {
+         height: 346px;
+         width: 470px;
+         /* border: 1px solid red; */
+         margin-left: 12%;
+         margin-top: 6%;
+
+      }
+
+      .left1 img {
+         height: 346px;
+         width: 470px;
+      }
+
+      .right1 {
+         height: 280px;
+         width: 570px;
+         margin-left: -35px;
+         background-color: white;
+         z-index: 1;
+         margin-top: 9%;
+      }
+
+      .r1 {
+         height: 30px;
+         width: 220px;
+         margin-top: 40px;
+         margin-left: 15px;
+         font-size: 20px;
+      }
+
+      .r2 {
+         height: 80px;
+         width: 500px;
+         margin-top: 25px;
+         margin-left: 15px;
+         font-size: 14px;
+      }
+
+      .r3 button {
+         height: 40px;
+         width: 150px;
+         background-color: #f1db25;
+         color: white;
+         margin-top: 5px;
+         margin-left: 15px;
+         border: none;
+      }
+
+      .r3 button:hover {
+         background-color: white;
+         color: #f1db25;
+         border: 1px solid #f1db25;
+      }
+
+      .three {
+         height: 530px;
+         width: 100%;
+         background-color: black;
+         z-index: -1;
+      }
+
+      .head {
+         height: 60px;
+         width: 100%;
+         top: 10%;
+         display: flex;
+         color: white;
+         justify-content: center;
+         position: relative;
+         align-items: center;
+      }
+
+      .foot {
+         height: 370px;
+         width: 100%;
+         display: flex;
+         flex-direction: row;
+         margin-top: 5%;
+      }
+
+      .f1 {
+         height: 280px;
+         width: 320px;
+         background-color: white;
+         margin-left: 7%;
+         margin-top: 30px;
+      }
+
+      .f1 img {
+         height: 55px;
+         width: 55px;
+         margin-left: 125px;
+         margin-top: 20px;
+      }
+
+      .f1 h3 {
+         height: 30px;
+         width: 200px;
+         margin-left: 85px;
+         margin-top: 20px;
+      }
+
+      .f1 p {
+         height: 80px;
+         width: 290px;
+         margin-left: 20px;
+         margin-top: 10px;
+         font-size: 15px;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .f1 button {
+         height: 35px;
+         width: 140px;
+         background-color: #f1db25;
+         color: white;
+         margin-left: 90px;
+         margin-top: 15px;
+         border: none;
+
+      }
+
+      .f1 button:hover {
+         border: 1px solid #f1db25;
+         background-color: white;
+         color: #f1db25;
+      }
+
+
+      .f2 {
+         height: 280px;
+         width: 320px;
+         background-color: white;
+         margin-left: 5%;
+         margin-top: 30px;
+      }
+
+      .f2 img {
+         height: 55px;
+         width: 55px;
+         margin-left: 125px;
+         margin-top: 20px;
+      }
+
+      .f2 h3 {
+         height: 30px;
+         width: 200px;
+         margin-left: 85px;
+         margin-top: 20px;
+      }
+
+      .f2 p {
+         height: 80px;
+         width: 290px;
+         margin-left: 20px;
+         margin-top: 10px;
+         font-size: 15px;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .f2 button {
+         height: 35px;
+         width: 140px;
+         margin-left: 90px;
+         color: white;
+         margin-top: 15px;
+         background-color: #f1db25;
+         border: none;
+      }
+
+      .f2 button:hover {
+         border: 1px solid #f1db25;
+         background-color: white;
+         color: #f1db25;
+      }
+
+      .f3 {
+         height: 280px;
+         width: 320px;
+         background-color: white;
+         margin-left: 7%;
+         margin-top: 30px;
+      }
+
+      .f3 img {
+         height: 55px;
+         width: 55px;
+         margin-left: 125px;
+         margin-top: 20px;
+      }
+
+      .f3 h3 {
+         height: 30px;
+         width: 200px;
+         margin-left: 85px;
+         margin-top: 20px;
+      }
+
+      .f3 p {
+         height: 80px;
+         width: 290px;
+         margin-left: 20px;
+         margin-top: 10px;
+         font-size: 15px;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .f3 button {
+         height: 35px;
+         width: 140px;
+         margin-left: 90px;
+         color: white;
+         margin-top: 15px;
+         border: none;
+         background-color: #f1db25;
+      }
+
+      .f3 button:hover {
+         border: 1px solid #f1db25;
+         background-color: white;
+         color: #f1db25;
+      }
+
+      .fourth {
+         height: 380px;
+         width: 100%;
+      }
+
+      .head1 {
+         height: 40px;
+         width: 100%;
+         margin-top: 60px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .fourth1 {
+         height: 300px;
+         width: 100%;
+      }
+
+      .c1 {
+         height: 100px;
+         width: 120px;
+         margin-left: 575px;
+         margin-top: 50px;
+      }
+
+      .c1 img {
+         height: 100px;
+         width: 120px;
+      }
+
+      .c2 {
+         height: 30px;
+         width: 120px;
+         margin-top: 20px;
+         margin-left: 582px;
+      }
+
+      .c3 {
+         height: 50px;
+         width: 810px;
+         margin-top: 17px;
+         margin-left: 282px;
+         font-size: 14px;
+      }
+
+      .clients{
+         height: 40px;
+         width: 43px;
+         margin-left: -390px;
+         margin-top: -75px;
+         border-radius: 130%;
+         background-color: black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .clients h3{
+         color: white;
+      }
+      .clients:hover{
+         background-color: #f1db25;
+      }
+      .clients1{
+         height: 40px;
+         width: 43px;
+         margin-left: 500px;
+         margin-top: -20px;
+         border-radius: 130%;
+         background-color: black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      
+      .clients1:hover{
+         background-color: #f1db25;
+      }
+      .clients1 h3{
+         color: white;
+      }
+   
+         
+         .fifth{
+            background-image: url("contact-bg.jpg");
+            background-size: cover;
+         height: 600px;
+      }
+      .fifth2 {
+         height: 350px;
+         width: 600px;
+         margin-top: 120px;
+         margin-left: 330px;
+      }
+
+      .fif1 {
+         height: 20px;
+         width: 100%;
+      }
+
+      .fif1 input {
+         width: 87%;
+         height: 30px;   
+         border: none;
+         outline: none;
+      }
+
+      .fif2 input {
+         margin-top: 40px;
+         width: 87%;
+         height: 30px;
+         border: none;
+         outline: none;
+      }
+
+      .fif3 input {
+         margin-top: 25px;
+         width: 87%;
+         height: 30px;
+         border: none;
+         outline: none;
+      }
+
+      .fif4 input {
+         margin-top: 25px;
+         width: 87%;
+         height: 30px;
+         padding-top: 30px;
+         padding-bottom: 30px;
+         border: none;
+         outline: none;
+      }
+
+      .fif5 button {
+         height: 40px;
+         width: 135px;
+         margin-top: 25px;
+         border: none;
+         margin-left: 190px;
+         z-index: 1;
+         background-color: #f1db25;
+         /* border: 1px solid red; */
+      }
+
+      .fif5 button:hover {
+         background-color: black;
+         color: white;
+         border: 1px solid #f1db25;
+         opacity: 0.6;
+         z-index: -1;
+      }
+
+      .box1 {
+         height: 20px;
+         width: 150px;
+      }
+
+      .sixth {
+         height: 730px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .six1 {
+         height: 100px;
+         width: 100%;
+         margin-top: 60px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+
+      }
+
+      .s1 {
+         height: 25px;
+         width: 180px;
+         display: flex;
+         justify-content: center;
+      }
+
+      .s2 {
+         height: 45px;
+         width: 950px;
+         display: flex;
+         margin-top: 30px;
+         justify-content: center;
+         font-size: 14px;
+      }
+
+      .six2 {
+         height: 500px;
+         width: 70%;
+         display: flex;
+         margin-top: 60px;
+         justify-content: space-between;
+      }
+
+      .s4 {
+         height: 400px;
+         width: 30%;
+         position: relative;
+      }
+
+      .s4 img {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+      }
+
+      .gaurd-image-content{
+         height: 25%;
+         width: 100%;
+         position: absolute;
+         bottom: 0px;
+         background-color: black;
+         opacity: 0.5;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         row-gap: 10px;
+      }
+      .s7 button {
+         height: 35px;
+         width: 120px;
+         margin-top: 435px;
+         border: none;
+         margin-left: -220px;
+         color: white;
+         background-color: #f1db25;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         /* position: relative; */
+      }
+
+      .s7 button:hover {
+         background-color: white;
+         color: #f1db25;
+         border: 1px solid #f1db25;
+      }
+
+      .s41 {
+         height: 40px;
+         width: 60px;
+      }
+
+      .seventh {
+         height: 300px;        
+          background-color: black;
+      }
+
+      .seven1 {
+         height: 60px;
+         width: 100%;
+         margin-top: 30px;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+      }
+
+      .sev1 {
+         height: 30px;
+         width: 100px;
+         color: white;
+         margin-left: 120px;
+      }
+
+      .sev2 {
+         height: 30px;
+         width: 150px;
+         color: white;
+         margin-left: 160px;
+      }
+
+      .sev3 {
+         height: 30px;
+         width: 140px;
+         color: white;
+         margin-left: 110px;
+      }
+
+      .sev4 {
+         height: 30px;
+         width: 140px;
+            color: white;
+         margin-left: 140px;
+      }
+
+      .seven2 {
+         height: 150px;
+         width: 100%;
+            display: flex;
+         flex-direction: row;
+      }
+
+      .paregraph {
+         height: 50px;
+         width: 200px;
+         margin-left: 120px;
+         font-size: 14px;
+         color: white;
+      }
+
+      .paragraph1 {
+         height: 60px;
+         width: 195px;
+         margin-left: 60px;
+         font-size: 14px;
+         color: white;
+      }
+
+      .paragraph2 {
+         height: 80px;
+         width: 235px;        
+          margin-left: 68px;
+         font-size: 14px;
+         color: white;
+      }
+
+      .paragraph3 {
+         height: 120px;
+         width: 235px;
+         margin-left: 40px;
+         font-size: 14px;
+         color: white;
+      }
+
+      .paragraph3 input {
+         border-radius: 30px;
+         height: 30px;
+         width: 220px;
+         border: none;
+         outline: none;
+      }
+
+      .paragraph3 button {
+         height: 35px;
+         color: white;
+         border: none;
+         background-color: #f1db25;
+         width: 150px;
+         border-radius: 30px;
+      }
+
+      .seven3 {
+         height: 30px;
+         width: 480px;
+         margin-top: 50px;
+         margin-left: 410px;
+         color: white;
+         font-size: 14px;
+      }
+   </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <section class="first">
+
+      <div class="content">
+         <div class="color">
+
+         </div>
+         <div class="header">
+            <div>
+               <i class="fa-solid fa-location-dot" style="color: #f1db25;"><span style="color: white;"> Lorem ipsum dolor sit amet,</span></i>
+            </div>
+            <div>
+               <i class="fa-solid fa-phone" style="color: #f1db25;"><span style="color: white;"> Call : +01 1234567890</span></i>
+            </div>
+            <div>
+               <i class="fa-solid fa-envelope" style="color: #f1db25;"><span style="color: white;"> demo@gmail.com</span></i>
+            </div>
+         </div>
+         <div class="contacts">
+            <div class="contacts1">
+               <h2>Guarder</h2>
+            </div>
+            <div class="contacts2">
+               <a>HOME</a>
+        <a>ABOUT</a>
+        <a>SERVICES</a>
+        <a>GUARDS</a>
+        <a>CONTACT US</a>
+          </div>
+         </div>
+         <div class="contener">
+            <div class="heading">
+               <h1>YOUR SAFTEY</h1>
+               <h1>OUR RESPONSIBILITY</h1>
+            </div>
+            <div class="pera">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod magna aliqua. Ut enim ad minim
+                  veniam</p>
+            </div>
+            <div class="buttons">
+               <button>Read more</button>
+               <button>Get A Quote</button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="two">
+      <div class="left1">
+         <img src="about-img.jpg">
+      </div>
+      <div class="right1">
+         <div class="r1">
+            <h1>WHO ARE WE?</h1>
+         </div>
+         <div class="r2">
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+               ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
+         </div>
+         <div class="r3">
+            <button>READ MORE</button>
+         </div>
+      </div>
+   </section>
+
+   <section class="three">
+      <div class="head">
+         <h1>OUR SERVICES</h1>
+      </div>
+      <div class="foot">
+         <div class="f1">
+            <img src="favicon.png">
+            <h3>HOME SECURITY</h3>
+            <p>Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus
+               tenetur corrupti excepturi ullam.</p>
+            <button>Read More</button>
+         </div>
+         <div class="f2">
+            <img src="s2.svg">
+            <h3>OFFICE SECURITY</h3>
+            <p>Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus
+               tenetur corrupti excepturi ullam.</p>
+            <button>Read More</button>
+         </div>
+
+         <div class="f3">
+            <img src="s3.svg">
+            <h3>BODYGUARD</h3>
+            <p>Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus
+               tenetur corrupti excepturi ullam.</p>
+            <button>Read More</button>
+         </div>
+      </div>
+   </section>
+
+   <section class="fourth">
+      <div class="head1">
+         <h1>WHAT IS SAYS OUR CLIENTS</h1>
+      </div>
+      
+      <div class="fourth1">
+         <div class="c1">
+            <img src="client.png">
+            
+      <div class="clients">
+           <h3><</h3>
+      </div>
+      
+      <div class="clients1">
+         <h3>></h3>
+    </div>
+         </div>
+         <div class="c2">
+            <h4>Minim Veniam</h4>
+         </div>
+         <div class="c3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            </p>
+         </div>
+      </div>
+   </section>
+
+   <section class="fifth">
+      <div class="fifth1">
+      </div>
+      <div class="box1">
+            <!-- <h1>GET IN TOUCH</h1> -->
+      </div>
+      <div class="fifth2">
+         <div class="fif1">
+            <input type="text" name="full name" placeholder="FULL NAME">
+         </div>
+         <div class="fif2">
+            <input type="text" name="full name" placeholder="EMAIL">
+         </div>
+         <div class="fif3">
+            <input type="text" name="full name" placeholder="PHONE NUMBER">
+         </div>
+         <div class="fif4">
+            <input type="text" name="full name" placeholder="MESSAGE">
+         </div>
+         <div class="fif5">
+            <button>SEND</button>
+         </div>
+
+      </div>
+   </section>
+
+   <section class="sixth">
+      <div class="six1">
+         <div class="s1">
+            <h1>OUR GUARDS</h1>
+         </div>
+         <div class="s2">
+            <p>Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla
+               mauris iaculis. Erat eget vitae malesuada, tortor tincidunt porta lorem lectus.</p>
+         </div>
+      </div>
+      <div class="six2">
+         <div class="s4">
+            <img src="t1.jpg">
+            <div class="gaurd-image-content">
+               <h4 style="color: white; opacity: 1 !important;">Martin Anderson</h4>
+               <p style="color: white;">supervisor</p>
+            </div>
+         </div>
+         <div class="s4">
+            <img src="t2.jpg">
+            <div class="gaurd-image-content">
+               <h4 style="color: white; opacity: 1 !important;">Martin Anderson</h4>
+               <p style="color: white;">supervisor</p>
+            </div>
+         </div>
+         <div class="s4">
+            <img src="t3.jpg">
+            <div class="gaurd-image-content">
+               <h4 style="color: white; opacity: 1 !important;">Martin Anderson</h4>
+               <p style="color: white;">supervisor</p>
+            </div>
+            <div class="s7">
+               <button>View All</button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="seventh">
+      <div class="seven1">
+         <div class="sev1">
+            <h1>Guarder</h1>
+         </div>
+         <div class="sev2">
+            <h1>Useful Link</h1>
+         </div>
+         <div class="sev3">
+            <h1>Contact Us</h1>
+         </div>
+         <div class="sev4">
+            <h1>NewSletter</h1>
+         </div>
+      </div>
+      <div class="seven2">
+         <div class="paregraph">
+            <p>dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r</p>
+         </div>
+         <div class="paragraph1">
+            <p>dolor sit amet, consectetur magna aliqua. Ut enim adminim veniam,quisdotempor incididunt r</p>
+         </div>
+         <div class="paragraph2">
+            <i class="fa-solid fa-location-dot"><span> Lorem ipsum dolor sit amet,</span></i><br>
+            <br><i class="fa-solid fa-phone"><span> Call : +01 1234567890</span></i><br>
+            <br><i class="fa-solid fa-envelope"><span> demo@gmail.com</span></i>
+         </div>
+
+         <div class="paragraph3">
+            <input type="text" name="Email" values="Email" placeholder="   Enter your email"><br>
+            <br><button>SUBSCRIBE</button><br>
+            <br> <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+         </div>
+      </div>
+      <div class="seven3">
+         <h4>© 2023 All Rights Reserved. Design by Free Html Templates</h4>
+      </div>
+   </section>
+</body>
+
+</html>
